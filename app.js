@@ -897,6 +897,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+    
 
     // Handle clicks outside cart sidebar
     document.addEventListener('click', (e) => {
@@ -910,3 +911,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+// ---------- Local Auth ----------
+const usersKey = 'clothify_users';
+const currentKey = 'clothify_current_user';
+
+function getUsers() {
+  return JSON.parse(localStorage.getItem(usersKey) || '[]');
+}
+
+function saveUsers(arr) {
+  localStorage.setItem(usersKey, JSON.stringify(arr));
+}
+
