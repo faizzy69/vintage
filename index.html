@@ -345,7 +345,28 @@
         </div>
     </footer>
 
+    <!-- Overlay -->
+    <div class="overlay hidden" id="overlay"></div>
 
+    <script src="app.js"></script>
+    <div id="authModal" class="modal">
+  <div class="modal__content">
+    <span class="modal__close" id="closeAuth">&times;</span>
+    <h2 id="authHeader">Sign Up</h2>
+
+    <form id="authForm">
+      <input type="text" id="authName" placeholder="Name" required>
+      <input type="email" id="authEmail" placeholder="Email" required>
+      <input type="password" id="authPass" placeholder="Password" required>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <p id="authToggleText">
+      Already have an account?
+      <a href="#" id="switchToSignIn">Sign In</a>
+    </p>
+  </div>
+</div>
 
 </body>
 </html>
